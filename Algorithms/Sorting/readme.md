@@ -20,7 +20,7 @@ Here, we discuss about 5 popular sorting algorithms which are :-
 
 - It is not an efficient algorithm for large lists
 
-## Insetion Sort
+## Insertion Sort
 
 - It works by dividing the array into sorted and unsorted part
 - Initially, the sorted part only contains the second element (1st index) of the array, and the unsorted part contains the remaining elements
