@@ -41,9 +41,9 @@ class Queue {
 let queue = new Queue();
 
 // enqueue method used to add an element on the rear side of the 'Queue';
-queue.enqueue(10)
-queue.enqueue(20)
-queue.enqueue(30)
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
 
 // dequeue method used to remove and return element from the front of the queue (first in first out)
 let removedElement = queue.dequeue();

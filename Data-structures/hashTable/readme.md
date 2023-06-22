@@ -36,6 +36,6 @@ A7: Hash tables are useful when you need efficient key-value pair storage, fast 
 
 4. Salting : To enhance security. a technique called salting is often employed with hashtables. A salt is a random value appended to the original password before hashing, the salt value is also stored in the hashtable alongside the hashed password, salting prevents the use of pre-computed rainbow tables or other common attacks where the same password hashed are known in advance
 
-Q9 : What is load factor in hash table?
-----
+## Q9 : What is load factor in hash table?
+
 A9 : Load factor is a measure of how full the hashtable is. it is defined as the ratio of the number of elements stored in the hashtable to the total number of buckets or slots available in the hashtable
