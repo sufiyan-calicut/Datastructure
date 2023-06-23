@@ -4,7 +4,7 @@ A1: A hash table, also known as a hash map, is a data structure that allows for 
 
 ## Q2: How does a hash table handle collisions?
 
-A2: Collisions occur when two different keys map to the same index in the array. Hash tables handle collisions through techniques like separate chaining or open addressing. In separate chaining, each index of the array contains a linked list or an array to store multiple key-value pairs. In open addressing, if a collision occurs, the algorithm probes the next available index in the array to find an empty slot for storage..
+A2: Collisions occur when two different keys map to the same index in the array. Hash tables handle collisions through techniques like separate chaining or open addressing. In separate chaining, each index of the array contains a linked list or an array to store multiple key-value pairs. In open addressing, if a collision occurs, the algorithm probes the next available index in the array to find an empty slot for storage.
 
 ## Q3: What is a hash function?
 
@@ -26,26 +26,26 @@ A6: Hash tables often need resizing when the number of elements exceeds a certai
 
 A7: Hash tables are useful when you need efficient key-value pair storage, fast lookups, insertions, and deletions. They are commonly used in scenarios such as caching, indexing, and implementing associative arrays.
 
-## Q8 : Applications of hash table
+## Q8: Applications of hash table
 
-1. Data Caching : Cache storing mechanism is very popular in computer science, which used to store fequently accessed data, which are used hash tables to store data, By using hash table user can quickly retrive the value based on a key avoiding the need to perform expensive computation or data base queries
+1. Data Caching: Cache storing mechanism is very popular in computer science, which used to store frequently accessed data, which are used hash tables to store data, By using hash table user can quickly retrieve the value based on a key avoiding the need to perform expensive computation or database queries
 
-2. Databases indexing : They are used to build indexes that provide efficient access to data based on specific criteria or atributes
+2. Databases indexing: They are used to build indexes that provide efficient access to data based on specific criteria or attributes
 
-3. Password storage : instead of storing password in plain text, which is highly in-secure hashtables are used to store the hashed version of passwords, A hash function takes the original password as input and generates a fixed length hashvalue which is a unique representation of the new password
+3. Password storage: instead of storing passwords in plain text, which is highly in-secure hashtables are used to store the hashed version of passwords, A hash function takes the original password as input and generates a fixed length hash value which is a unique representation of the new password
 
-4. Salting : To enhance security. a technique called salting is often employed with hashtables. A salt is a random value appended to the original password before hashing, the salt value is also stored in the hashtable alongside the hashed password, salting prevents the use of pre-computed rainbow tables or other common attacks where the same password hashed are known in advance
+4. Salting: To enhance security. a technique called salting is often employed with hashtables. A salt is a random value appended to the original password before hashing, the salt value is also stored in the hashtable alongside the hashed password, salting prevents the use of pre-computed rainbow tables or other common attacks where the same password hashed are known in advance
 
-## Q9 : What is load factor in hash table?
+## Q9: What is the load factor in a hash table?
 
 A9 :
 
 - Load factor is a measure of how full the hashtable is. it is defined as the ratio of the number of elements stored in the hashtable to the total number of buckets or slots available in the hashtable.
 - The load factor is typically denoted by the symbol 'λ' and calculated as
-  λ = (number of elements in hashtable) / (total number of bucket)
+  λ = (number of elements in a hashtable) / (total number of the bucket)
 - Load factor values range between 0 and 1
-- A load factor 0 indicates an empty hashtable, while al load factor of 1 indicates that all buckets in the hashtable are occupied
-- A higher load factor means that the hashtable is more densily filled with elements which can lead to increase collisions and longer lookup items
-- To maaintain good performance. it is often recommended to keep the loadfactor within a ceratain range. normally it is prefereble to keep below 0.7 or 0.8
+- A load factor of 0 indicates an empty hashtable, while a load factor of 1 indicates that all buckets in the hashtable are occupied
+- A higher load factor means that the hashtable is more densely filled with elements which can lead to increased collisions and longer lookup items
+- To maintain good performance. it is often recommended to keep the load factor within a certain range. normally it is preferable to keep below 0.7 or 0.8
 - Leaving some empty space in hashtable will minimise collisions
 - By monitoring the load factor user can dynamically resize the hashtable when necessary to avoid excessive collisions
