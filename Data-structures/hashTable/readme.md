@@ -38,4 +38,14 @@ A7: Hash tables are useful when you need efficient key-value pair storage, fast 
 
 ## Q9 : What is load factor in hash table?
 
-A9 : Load factor is a measure of how full the hashtable is. it is defined as the ratio of the number of elements stored in the hashtable to the total number of buckets or slots available in the hashtable
+A9 :
+
+- Load factor is a measure of how full the hashtable is. it is defined as the ratio of the number of elements stored in the hashtable to the total number of buckets or slots available in the hashtable.
+- The load factor is typically denoted by the symbol 'λ' and calculated as
+  λ = (number of elements in hashtable) / (total number of bucket)
+- Load factor values range between 0 and 1
+- A load factor 0 indicates an empty hashtable, while al load factor of 1 indicates that all buckets in the hashtable are occupied
+- A higher load factor means that the hashtable is more densily filled with elements which can lead to increase collisions and longer lookup items
+- To maaintain good performance. it is often recommended to keep the loadfactor within a ceratain range. normally it is prefereble to keep below 0.7 or 0.8
+- Leaving some empty space in hashtable will minimise collisions
+- By monitoring the load factor user can dynamically resize the hashtable when necessary to avoid excessive collisions
