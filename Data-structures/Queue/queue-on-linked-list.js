@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-// create the Queue data structure
+//Create the Queue data structure
 class Queue {
   constructor() {
     this.head = null;
@@ -30,12 +30,12 @@ class Queue {
     this.size++;
   }
 
-  //   dequeue method used to remove element from front of the queue
+  //   dequeue method used to remove an element from the front of the queue
   dequeue() {
     if (this.isEmpty()) return "Queue is empty";
     let removedNode = this.head;
-    this.top = removedNode.next;
-    // if queue is empty, below code is to pointer to indicate there is no more elements
+    this.head = removedNode.next;
+    // if queue is empty, the below code is to pointer to indicate there are no more elements
     if (this.isEmpty()) this.tail = null;
     this.size--;
     return removedNode.value;
