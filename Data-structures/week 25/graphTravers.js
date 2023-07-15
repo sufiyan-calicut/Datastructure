@@ -89,6 +89,7 @@ class Graph {
   graph.addVertex('C');
   graph.addVertex('D');
   graph.addVertex('E');
+  graph.addVertex('H')
   
 
   graph.addEdge('A', 'B');
