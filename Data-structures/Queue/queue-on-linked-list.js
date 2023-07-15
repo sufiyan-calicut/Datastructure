@@ -34,10 +34,10 @@ class Queue {
   dequeue() {
     if (this.isEmpty()) return "Queue is empty";
     let removedNode = this.head;
-    this.top = removedNode.next;
+    this.head = removedNode.next;
+    this.size--;
     // if queue is empty, below code is to pointer to indicate there is no more elements
     if (this.isEmpty()) this.tail = null;
-    this.size--;
     return removedNode.value;
   }
 

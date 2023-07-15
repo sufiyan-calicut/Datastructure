@@ -4,7 +4,7 @@ A1: A hash table, also known as a hash map, is a data structure that allows for 
 
 ## Q2: How does a hash table handle collisions?
 
-A2: Collisions occur when two different keys map to the same index in the array. Hash tables handle collisions through techniques like separate chaining or open addressing. In separate chaining, each index of the array contains a linked list or an array to store multiple key-value pairs. In open addressing, if a collision occurs, the algorithm probes the next available index in the array to find an empty slot for storage.
+A2: Collisions occur when two different keys map to the same index in the array. Hash tables handle collisions through techniques like separate chaining or open addressing. In separate chaining, each index of the array contains a linked list or an array or an object to store multiple key-value pairs. In open addressing, if a collision occurs, the algorithm probes checks the next available index in the array to find an empty slot for storage.
 
 ## Q3: What is a hash function?
 

@@ -1,38 +1,44 @@
-class HashTable {
-  constructor() {
-    this.table = {};
-  }
-
-  hash(key) {
-    let hashedCode = 0;
-    for (let i = 0; i < key.length; i++) {
-      hashedCode += key.charCodeAt(i);
-    }
-    return hashedCode;
-  }
-
-  insert(key, value) {
-    let slotNumber = this.hash(key);
-    if (!this.table[slotNumber]) {
-      this.table[slotNumber] = {};
-    }
-    this.table[slotNumber][key] = value;
-  }
-
-  has(key){
-    let slotNumber = this.hash(key);
-    if(this.table[slotNumber][key]){
-        return this.table[slotNumber][key];
-    }
-    return undefined;
-  }
-
-  delete (key) {
-    let slotNumber = this.hash(key);
-    if(this.table[slotNumber] && this.table[slotNumber][key]){
-        delete this.table[slotNumber][key]
-        
-    }
-
+class Node{
+  constructor(value){
+    this.value = value;
+    this.left = null;
+    this.right = null;
   }
 }
+
+class BinarySearchTree{
+  constructor(){
+    this.root = null
+  }
+
+  isEmpty(){
+    return this.root === null
+  }
+
+  insert(value){
+    const newNode = new Node(value)
+    if(this.isEmpty()){
+      this.root = newNode
+    } else {
+      insertNode(this.root,newNode)
+    }
+  }
+
+  insertNode(root, newNode){
+    if(newNode.value < root.value){
+      if(root.left == null){
+        root.left = newNode
+      } else {
+        this.insertNode(root.left, newNode)
+      }
+    } else {
+      if(root.right == null){
+        root.right = newNode
+      } else {
+        this.insertNode(root.right, newNode)
+      }
+    }
+  }
+}
+
+const bst = new BinarySearchTree()

@@ -10,7 +10,7 @@ class HashTable {
     for (let i = 0; i < key.length; i++) {
       hashedCode += key.charCodeAt(i);
     }
-    return hashedCode;
+    return hashedCode % 10;
   }
   // insert method to add value into hashtable
   insert(key, value) {
@@ -56,8 +56,26 @@ class HashTable {
       this.table[index] !== undefined && this.table[index][key] !== undefined
     );
   }
-}
+  print() {
+    for (const index in this.table) {
+      if (this.table.hasOwnProperty(index)) {
+        const bucket = this.table[index];
+        for (const key in bucket) {
+          if (bucket.hasOwnProperty(key)) {
+            console.log(`Key: ${key}, Value: ${bucket[key]}`);
+          }
+        }
+      }
+    }
+  }
+}  
 
 let hashTable = new HashTable();
 hashTable.insert("number", 10);
-console.log(hashTable.has("number "));
+hashTable.insert('name','sufiyan')
+hashTable.insert('profession','software engineer')
+hashTable.insert('salary','5 lpa')
+console.log(hashTable.has("number"));
+
+
+hashTable.print();

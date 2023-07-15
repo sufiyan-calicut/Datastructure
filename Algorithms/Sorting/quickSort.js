@@ -15,6 +15,6 @@ function quickSort(array) {
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
-let unsotedArray = [5,3,8,2,8,4,3,2,4,7,8,2]
+let unsotedArray = [9,8,7,6,5,4,3,2,1]
 let sorted = quickSort(unsotedArray);
 console.log(sorted)
