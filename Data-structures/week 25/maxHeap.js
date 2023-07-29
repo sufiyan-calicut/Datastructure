@@ -10,7 +10,7 @@ class MaxHeap {
   
     extractMax() {
       if (this.heap.length === 0) {
-        return null;
+        return ;
       }
       if (this.heap.length === 1) {
         return this.heap.pop();
@@ -50,7 +50,7 @@ class MaxHeap {
       while (this.heap.length > 0) {
         sortedArray.push(this.extractMax());
       }
-      return sortedArray;
+      return sortedArray;`    `
     }
   
     deleteValue(value) {
@@ -73,7 +73,6 @@ class MaxHeap {
     }
   
     //code to make an array to heap;
-
     buildHeap() {
       const heapSize = Math.floor(this.heap.length / 2);
       for (let i = heapSize - 1; i >= 0; i--) {
